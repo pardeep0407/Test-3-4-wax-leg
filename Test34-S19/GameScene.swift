@@ -30,8 +30,12 @@ class GameScene: SKScene {
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = touches.first
-        if (touch == nil) {
-            return
+        
+        let touchedNodes = self.nodes(at: location)
+        for node in touchedNodes.reversed() {
+            if node.name == "Hair1" {
+                self.currentNode = node
+                node.removeFromParent()
         }
         
         let location = touch!.location(in:self)
@@ -54,4 +58,5 @@ class GameScene: SKScene {
         }
         
     }
+}
 }
