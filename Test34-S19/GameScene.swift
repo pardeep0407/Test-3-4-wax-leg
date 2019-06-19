@@ -12,6 +12,12 @@ import GameplayKit
 class GameScene: SKScene {
     
     var nextLevelButton:SKLabelNode!
+    var leg=SKSpriteNode(imageNamed: "leg")
+    var hair1=SKSpriteNode(imageNamed: "Hair1")
+    var hair2=SKSpriteNode(imageNamed: "Hair2")
+    var hair3=SKSpriteNode(imageNamed: "Hair3")
+    var hair4=SKSpriteNode(imageNamed: "Hair4")
+    
     
     
     override func didMove(to view: SKView) {
